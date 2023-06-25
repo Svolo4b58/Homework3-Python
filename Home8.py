@@ -71,7 +71,7 @@ def del_contact():
 
 
 def change_contact(data_tuple):
-    """Редактирование существующей информации"""
+    """Редактирование действующей информации"""
 
     global all_data
     symbol = "\n"
@@ -205,12 +205,10 @@ def exp_bd(name):
         with open(change_name, "w", encoding="utf-8") as f:
             f.write(f'{symbol.join(all_data)}\n')
 
-
 def ipm_bd(name):
     global file_base
     if path.exists(name):
         file_base = name
         read_records()
-
 
 main_menu()
